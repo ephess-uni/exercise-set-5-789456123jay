@@ -24,15 +24,6 @@ if __name__ == "__main__":
     INFILE = arguments.infile
     OUTFILE = arguments.outfile
 
-    # Use these predefined input / output files
-    root_dir = get_repository_root()
-    INFILE = root_dir / "data" / "ex_5_2-data.csv"
-    OUTFILE = root_dir / "outputs" / "ex_5_2-processed.csv"
-
-    # Complete the data processing steps using numpy here.
-
-    # Save the output to OUTFILE using numpy routines.
-
     data_array = np.loadtxt(INFILE)
     
     data_array -= np.mean(data_array)
