@@ -24,3 +24,11 @@ if __name__ == "__main__":
     # Complete the data processing steps using numpy here.
 
     # Save the output to OUTFILE using numpy routines.
+
+    data_array = np.loadtxt(INPUT_FILE)
+    
+    data_array -= np.mean(data_array)
+
+    processed = data_array/np.std(data_array)
+
+    np.savetxt(OUTPUT_FILE, processed)
